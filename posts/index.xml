@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Brainway</title>
+    <link>https://brainway.rocks/posts/</link>
+    <description>Recent content in Posts on Brainway</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 24 May 2020 15:43:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://brainway.rocks/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Guide to Start a Free Blog</title>
+      <link>https://brainway.rocks/posts/simple-guide-to-start-a-free-blog/</link>
+      <pubDate>Sun, 24 May 2020 15:43:08 +0800</pubDate>
+      
+      <guid>https://brainway.rocks/posts/simple-guide-to-start-a-free-blog/</guid>
+      <description>Header A Header A-B Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+  </channel>
+</rss>
