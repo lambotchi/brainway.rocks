@@ -1,0 +1,24 @@
+theme = "tale"
+baseURL = "https://brainway.rocks"
+languageCode = "en-us"
+title = "Brainway"
+[menu]
+  [[menu.main]]
+    identifier = "golang"
+    name = "Golang"
+    title = "golang"
+    url = "/go/"
+    weight = 0
+  [[menu.main]]
+    identifier = "devops"
+    name = "Devops"
+    title = "devops"
+    url = "/devops/"
+  [[menu.main]]
+    identifier = "kubernetes"
+    name = "Kubernetes"
+    title = "kubernetes"
+    url = "/kubernetes/"
+    weight = 0
+[Author]
+    name = "Lemuel Nabong"
