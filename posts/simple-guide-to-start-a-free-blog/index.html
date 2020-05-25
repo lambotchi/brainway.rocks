@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Simple Guide to Start a Free Blog &middot; Brainway</title>
+		<title>Blog for Free Using Your Own Domain &middot; Brainway</title>
 
 		
   		<link rel="stylesheet" href="/css/style.css">
@@ -28,25 +28,9 @@
     
     
         <li>
-            <a href="/devops/">
+            <a href="/about/">
                 
-                <span>Devops</span>
-                
-            </a>
-        </li>
-    
-        <li>
-            <a href="/go/">
-                
-                <span>Golang</span>
-                
-            </a>
-        </li>
-    
-        <li>
-            <a href="/kubernetes/">
-                
-                <span>Kubernetes</span>
+                <span>About</span>
                 
             </a>
         </li>
@@ -65,18 +49,98 @@
         <br>
         <span>on&nbsp;</span><time datetime="2020-05-24 15:43:08 &#43;0800 PST">May 24, 2020</time>
 </div>
-		<h1 class="post-title">Simple Guide to Start a Free Blog</h1>
+		<h1 class="post-title">Blog for Free Using Your Own Domain</h1>
 <div class="post-line"></div>
 
 		
 
-		<h1 id="header-a">Header A</h1>
-<h2 id="header-a-b">Header A-B</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<h2 id="header-a-c">Header A-C</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<h1 id="header-b">Header B</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<p>This guide is for those who have their own domain. If you don&rsquo;t have one follow
+[Start a Free Blog Using yourblog.github.io]</p>
+<h1 id="this-is-a-draft">THIS IS A DRAFT</h1>
+<h1 id="prerequisites">Prerequisites</h1>
+<ul>
+<li><a href="https://github.com/join">Github Account</a></li>
+<li><a href="https://git-scm.com/downloads">Git 2.8</a></li>
+<li><a href="https://gohugo.io/getting-started/installing">Install Hugo</a></li>
+<li>Your own domain. ( You can buy one at <a href="https://www.namecheap.com">Namecheap</a> )</li>
+</ul>
+<h1 id="point-your-dns-server-to-github-pages">Point your DNS server to Github Pages</h1>
+<ol>
+<li>
+<p>Go to your DNS server page (e.g. <a href="https://www.namecheap.com">Namecheap</a>)</p>
+</li>
+<li>
+<p>Add the following records:</p>
+<ul>
+<li>A record for @ pointing to 185.199.108.153</li>
+<li>A record for @ pointing to 185.199.109.153</li>
+<li>A record for @ pointing to 185.199.110.153</li>
+<li>A record for @ pointing to 185.199.111.153</li>
+</ul>
+<p><strong>This usually takes up to 30 minutes to take efffect</strong></p>
+</li>
+</ol>
+<p>When a someone hit yourdomain.com or anything.yourdomain.com or yourdomain.com/something they will be pointed to one of the 4 github pages servers</p>
+<h1 id="setup-github-repository">Setup github repository</h1>
+<ol>
+<li>Create github repository. You can name it whatever you want or as simple as <code>blog</code> or <code>yourdomain.com</code></li>
+<li>Go to the repository&rsquo;s <code>Settings</code> &gt; <code>Github Pages</code> section &gt; <code>Custom domain</code></li>
+<li>Add your domain (e.g. yourdomain.com)</li>
+</ol>
+<p>Github repository will serve like a public directory of your blogs content.</p>
+<h1 id="initialize-new-hugo-site">Initialize new hugo site</h1>
+<p><em>terminal/command prompt:</em></p>
+<pre><code class="language-.shell" data-lang=".shell">&gt; hugo new site yourdomain.com-blog
+&gt; cd yourdomain.com-blog
+&gt; git init
+</code></pre><h1 id="choose-your-theme">Choose your theme</h1>
+<p>Choose from tons of hundred of <a href="https://themes.gohugo.io">hugo themes</a>.
+Take note of your chosen theme&rsquo;s github URL and name, we will use it for next step.</p>
+<p>Hugo is a static site generators, it is not limited to blog style of websites.</p>
+<h1 id="apply-your-chosen-theme">Apply your chosen theme</h1>
+<p><em>terminal/command prompt:</em></p>
+<pre><code class="language-.shell" data-lang=".shell">&gt; git submodule add $CHOSEN_THEME_GITHUB_URL themes/$CHOSEN_THEME_NAME
+&gt; echo 'theme = &quot;$CHOSEN_THEME_NAME&quot;' &gt;&gt; config.toml
+</code></pre><p>Sample values:</p>
+<ul>
+<li>$CHOSEN_THEME_GITHUB_URL: <code>https://github.com/budparr/gohugo-theme-ananke.git</code></li>
+<li>$CHOSEN_THEME_NAME: <code>ananke</code></li>
+</ul>
+<h1 id="add-contents">Add contents</h1>
+<p><em>terminal/command prompt:</em></p>
+<pre><code class="language-.shell" data-lang=".shell">&gt; hugo new posts/my-first-post.md
+</code></pre><p>Change the title and add some more content below posts/my-first-post.md</p>
+<h1 id="test-your-blog-locally">Test your blog locally</h1>
+<pre><code class="language-.shell" data-lang=".shell">&gt; hugo server -D
+</code></pre><p>By default this will be served at <a href="https://themes.gohugo.io">http://localhost:1313</a> Ctrl + C to stop.
+Ideally, you should keep the server running and edit your blog. You will see live results as you save your contents</p>
+<p><code>-D</code> without giving this flag, you only see the contents with <code>draft: false</code></p>
+<h1 id="show-it-to-the-world">Show it to the world</h1>
+<p>Let say that you have finalize your blog and ready to publish it online</p>
+<ol>
+<li>
+<p>Update <code>draft</code> value to <code>false</code> in posts/my-first-post.md</p>
+</li>
+<li>
+<p>Delete <code>public</code> folder if existing</p>
+</li>
+<li>
+<p>Add the URL of the repository you created from <code>Setup github repository</code></p>
+<p><code>git add submodule https://github.com/lambotchi/todelete.git public</code></p>
+</li>
+<li>
+<p>Render public contents. <code>hugo</code> or <code>hugo -D</code> if you want to generate site for your post that are still in draft</p>
+</li>
+<li>
+<p>Add CNAME record. <code>echo yourdomain.com &gt;&gt; CNAME</code></p>
+</li>
+<li>
+<p>Git commit. <code>git add . &amp;&amp; git commit -m 'Create first post'</code></p>
+</li>
+<li>
+<p>Publish. <code>cd public &amp;&amp; git push -u origin master</code></p>
+</li>
+</ol>
 
 
 		
@@ -91,7 +155,7 @@
 
         		<footer>
 			<span>
-			&copy; <time datetime="2020-05-24 16:24:21.680443 &#43;0800 PST m=&#43;0.059218554">2020</time> Lemuel Nabong. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
+			&copy; <time datetime="2020-05-26 02:47:36.769544 &#43;0800 PST m=&#43;0.061790456">2020</time> Lemuel Nabong. Made with <a href='https://gohugo.io'>Hugo</a> using the <a href='https://github.com/EmielH/tale-hugo/'>Tale</a> theme.
 			</span>
 		</footer>
 

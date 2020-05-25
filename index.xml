@@ -12,12 +12,15 @@
     
     
     <item>
-      <title>Simple Guide to Start a Free Blog</title>
+      <title>Blog for Free Using Your Own Domain</title>
       <link>https://brainway.rocks/posts/simple-guide-to-start-a-free-blog/</link>
       <pubDate>Sun, 24 May 2020 15:43:08 +0800</pubDate>
       
       <guid>https://brainway.rocks/posts/simple-guide-to-start-a-free-blog/</guid>
-      <description>Header A Header A-B Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+      <description>This guide is for those who have their own domain. If you don&amp;rsquo;t have one follow [Start a Free Blog Using yourblog.github.io]
+THIS IS A DRAFT Prerequisites  Github Account Git 2.8 Install Hugo Your own domain. ( You can buy one at Namecheap )  Point your DNS server to Github Pages   Go to your DNS server page (e.g. Namecheap)
+  Add the following records:
+ A record for @ pointing to 185.</description>
     </item>
     
   </channel>
